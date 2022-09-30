@@ -42,7 +42,7 @@ If bundler is not being used to manage dependencies, install the gem by executin
 def grab_a_nice_image
   # Open a camera, camera ids are numbered starting with 0.
   # We support only one camera at a time.
-  # You can call this now and grab multiple frames 
+  # You can call this once and grab multiple frames 
   # before you close it.
   Framegrabber.open(0)
 
