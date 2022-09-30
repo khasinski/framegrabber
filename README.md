@@ -72,7 +72,7 @@ Use `bin/console` to poke around and see what you can improve.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/khasinski/framegrabber. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/framegrabber/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/khasinski/framegrabber. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/khasinski/framegrabber/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
