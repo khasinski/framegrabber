@@ -3,7 +3,7 @@ PATH
   specs:
     framegrabber (0.1.0)
       pkg-config (~> 1.4)
-      rmagick (~> 4.0)
+      rmagick (>= 4, < 6)
 
 GEM
   remote: https://rubygems.org/
@@ -13,7 +13,8 @@ GEM
     rake (13.0.6)
     rake-compiler (1.2.0)
       rake
-    rmagick (4.3.0)
+    rmagick (5.3.0)
+      pkg-config (~> 1.4)
     rspec (3.11.0)
       rspec-core (~> 3.11.0)
       rspec-expectations (~> 3.11.0)
@@ -30,6 +31,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   framegrabber!
