@@ -2,21 +2,37 @@
 #include <opencv2/core.hpp>
 #include <opencv2/videoio.hpp>
 #include <grab_frame_ext.hpp>
+#include <unistd.h>
 
 using namespace cv;
 using namespace std;
 
 static VALUE open(VALUE _self, VALUE deviceID) {
     int camID = NUM2INT(deviceID);
-    Mat frame;
     cap.open(camID);
-
-    cap.read(frame);
-    sleep(1);
 
     if (!cap.isOpened()) {
       rb_raise(rb_eRuntimeError, "Unable to open camera %d", camID);
     }
+
+    // Wait for camera to provide a valid frame
+    Mat frame;
+    int attempts = 0;
+    const int max_attempts = 50; // 5 seconds at 100ms intervals
+    while (attempts < max_attempts) {
+      cap.read(frame);
+      if (!frame.empty()) {
+        break;
+      }
+      usleep(100000); // 100ms
+      attempts++;
+    }
+
+    if (frame.empty()) {
+      cap.release();
+      rb_raise(rb_eRuntimeError, "Camera %d failed to provide valid frame within timeout", camID);
+    }
+
     return Qnil;
 }
 
