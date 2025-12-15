@@ -51,9 +51,9 @@ static VALUE grab_frame(VALUE _self) {
     for(j=0; j<frame.cols; j++) {
       VALUE pixel = rb_ary_new_capa(3);
       unsigned char * p = frame.ptr(i, j); // Y first, X after
-      rb_ary_store(pixel, 2, ULL2NUM(p[2]*255)); // R
-      rb_ary_store(pixel, 1, ULL2NUM(p[1]*255)); // G
-      rb_ary_store(pixel, 0, ULL2NUM(p[0]*255)); // B
+      rb_ary_store(pixel, 0, ULL2NUM(p[2])); // R
+      rb_ary_store(pixel, 1, ULL2NUM(p[1])); // G
+      rb_ary_store(pixel, 2, ULL2NUM(p[0])); // B
 
       rb_ary_store(row, j, pixel);
     }
