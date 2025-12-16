@@ -53,10 +53,9 @@ def grab_a_nice_image
   @image = Framegrabber.grab_image
 
 rescue RuntimeError => e
-  
-  # Camera may be unavailable or frame might be empty
-  # At this point we don't have nice error handling
-  puts "Oh no! #{e.message}"
+
+   # Camera may be unavailable or frame might be empty
+   puts "Oh no! #{e.message}"
 ensure
   
   # Camera will stay active until it is released
