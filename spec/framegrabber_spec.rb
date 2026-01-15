@@ -5,8 +5,8 @@ RSpec.describe Framegrabber do
     expect(Framegrabber::VERSION).not_to be nil
   end
 
-  it "has version 0.1.0" do
-    expect(Framegrabber::VERSION).to eq("0.1.0")
+  it "has version 0.3.0" do
+    expect(Framegrabber::VERSION).to eq("0.3.0")
   end
 
   it "responds to open method" do

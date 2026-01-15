@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
   spec.extensions = ["ext/grab_frame_ext/extconf.rb"]
 
-  spec.add_development_dependency "rake-compiler", "~> 1.0"
-  spec.add_dependency "pkg-config", "~> 1.4"
-  spec.add_dependency "rmagick", "~> 4.0"
+  spec.add_development_dependency "rake-compiler", "~> 1.3"
+  spec.add_dependency "pkg-config", "~> 1.6"
+  spec.add_dependency "rmagick", "~> 4.3"
 end
