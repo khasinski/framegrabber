@@ -19,7 +19,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install OpenCV
-      run: sudo apt-get update && sudo apt-get install -y libopencv4-dev pkg-config
+      run: sudo apt-get update && sudo apt-get install -y libopencv-dev libmagickwand-dev pkg-config
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
